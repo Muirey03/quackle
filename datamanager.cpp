@@ -195,3 +195,9 @@ int DataManager::randomInteger(int low, int high)
 	lock_guard<mutex> lock(m_RngMutex);
 	return uniform_int_distribution<>(low, high)(m_mersenneTwisterRng);
 }
+
+double DataManager::randomReal(double low, double high)
+{
+	lock_guard<mutex> lock(m_RngMutex);
+	return uniform_real_distribution<>(low, high)(m_mersenneTwisterRng);
+}

@@ -127,6 +127,7 @@ public:
 	void seedRandomNumbers(unsigned int seed);
 	void seedRandomNumbers(seed_seq& seed);
 	int randomInteger(int low, int high);
+	double randomReal(double low, double high);
 	template <typename T> void shuffle(T& collection)
 	{
 		lock_guard<mutex> lock(m_RngMutex);
